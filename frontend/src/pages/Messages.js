@@ -14,8 +14,6 @@ const Messages = () => {
 
     const response = await fetchApi.json()
 
-    console.log('audios', response)
-
     if(response.success){
       setAllMessages(response?.data || [])
     }

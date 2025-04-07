@@ -9,7 +9,7 @@ const LogOutController = async (req, res) => {
              data : []
         })
     } catch {
-        res.Json({
+        res.json({
             message : 'error loggging out',
             success : false,
             error : true

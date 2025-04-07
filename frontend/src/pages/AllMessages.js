@@ -16,8 +16,6 @@ const AllMessages = () => {
 
     const response = await fetchApi.json()
 
-    console.log('audios', response)
-
     if(response.success){
       toast.success(response.message)
       setAllMessages(response?.data || [])
@@ -27,12 +25,25 @@ const AllMessages = () => {
       toast.error(response.message)
     }
   }
+
   useEffect(() => {
     fetchAllAudio()
   }, [])
   
   if (!allMessages.length) {
-    return <div>Loading...</div>
+    return(
+      <div className='flex justify-between items-center'>
+      <div>Loading...</div>
+      <div>
+      <button className='text-xl bg-slate-500 px-4 py-2 rounded-full' onClick={() => setOpenUploadScreen(prev => !prev)}>upload Audio</button>
+      </div>
+      {
+      openUploadSCreen && (
+        <UploadAudio fetchAllAudio={fetchAllAudio} onClose={() => setOpenUploadScreen(prev => !prev)} />
+      )
+    }
+    </div>
+    )
   }
   return (
    <main>
@@ -45,7 +56,7 @@ const AllMessages = () => {
           </div>
         </div>
     </div>
-    <div className='gap-3'>
+    <div className='p-3 flex md:flex-row'>
        {
          allMessages.map((audio, index) => {
              return(
@@ -57,7 +68,7 @@ const AllMessages = () => {
      </div>
     {
       openUploadSCreen && (
-        <UploadAudio onClose={() => setOpenUploadScreen(prev => !prev)} />
+        <UploadAudio fetchAllAudio={fetchAllAudio} onClose={() => setOpenUploadScreen(prev => !prev)} />
       )
     }
     </div>

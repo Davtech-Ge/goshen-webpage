@@ -5,7 +5,6 @@ import UpdatePost from '../pages/UpdateAudio'
 const AudioCard = ({ data, fetchData }) => {
   const [updateAudio, setUpdateAudio] = useState(false)
 
-console.log(data, 'audio card')
 return (
  <main className='flex w-full h-full'>
    <div className='flex mx-5 border rounded-lg bg-slate-200 w-fit'>

@@ -6,7 +6,7 @@ import { CgClose } from 'react-icons/cg'
 import { FaCloudUploadAlt } from 'react-icons/fa'
 import { MdDelete } from 'react-icons/md'
 
-const UploadAudio = ({ onClose, }) => {
+const UploadAudio = ({ onClose, fetchAllAudio }) => {
   const [data, setData] = useState({
     title: '',
     author: '',
@@ -23,7 +23,6 @@ const UploadAudio = ({ onClose, }) => {
    const uploadCloudinary = await audioUpload(file)
 
    if (!uploadCloudinary){
-    console.log('uploadFailed', uploadCloudinary)
     toast.error('upload Failed please try again')
     return;
    }
@@ -35,6 +34,7 @@ const UploadAudio = ({ onClose, }) => {
       }
     })
     console.log('audiofile', uploadCloudinary.url)
+    
   }
   const handleOnChange = (e) => {
     const {name, value} = e.target
@@ -60,6 +60,7 @@ const UploadAudio = ({ onClose, }) => {
 
     if (response.success) {
       toast.success(response.message)
+      fetchAllAudio()
       onClose()
     }
 

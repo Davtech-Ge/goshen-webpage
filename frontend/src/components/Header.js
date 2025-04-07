@@ -12,25 +12,33 @@ const Header = () => {
     const [displayMenuIcon, setDisplayMenuIcon] = useState(false)
 
     const dispatch = useDispatch();
-const user = useSelector(state => state?.user?.user);
+    const User = useSelector(state => state?.user.user?.data);
 
-console.log('userrole', user?.role || 'No role found');
+    const handleLogout = async () => {
+        try {
+         const fetchApi = await fetch(GoshenApi.logOut.url, {
+            method: GoshenApi.logOut.method,
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
 
-   const handleLogout = async () => {
-    const fetchApi = await fetch(GoshenApi.logOut.url, {
-        method : GoshenApi.logOut.method,
-        credentials: 'include'
-    })
+         if (!fetchApi.ok) {
+            throw new Error('Network response was not ok');
+        }
 
-    const data = await fetchApi.json()
+        const data = await fetchApi.json();
 
-    if(data.success){
-        toast.success(data.message);
-        dispatch(setUserDetails(null))
-    }
-
-    if(data.error){
-        toast.error(data.message)
+        if (data.success) {
+            toast.success(data.message);
+            dispatch(setUserDetails(null));
+        } else if (data.error) {
+            toast.error(data.message);
+        }
+    } catch (error) {
+        console.error('Logout failed:', error);
+        toast.error('Failed to log out. Please try again.');
     }
    }
 
@@ -41,9 +49,7 @@ console.log('userrole', user?.role || 'No role found');
     <div>
         <div className='p-2 '>
            <div className='flex pb-4'>
-           <Link to={"/login"} >
             <img src={LogoIcon} alt='CGCA' width={60} height={60} className='rounded-full' />
-            </Link>
             </div>
         </div>
     </div>
@@ -55,11 +61,19 @@ console.log('userrole', user?.role || 'No role found');
                     <Link to={"/services"} className='mx-2'>Our Services</Link>
                     <Link to={"/messages"} className='mx-2'>Messages</Link>
                     <Link to={"/contact"} className='mx-2'>Contact Us</Link>
-                    <Link to={"/services"} className='mx-2'>About Us</Link>
                     <div>
                         {
-                            user?.role === ROLES.ADMIN && ( <Link to={'/user'}>Dashboard</Link>) 
+                            User?.role === ROLES.ADMIN && ( <Link to={'/user'}>Dashboard</Link>) 
 
+                        }
+                    </div>
+                    <div>
+                        {
+                            User?._id ? (
+                                <button className='mx-2 bg-blue-600 px-2 py-1 rounded-full hover:bg-blue-700' onClick={handleLogout}>LogOut</button>
+                            ) : (
+                                <button className='mx-2 bg-blue-600 px-2 py-1 rounded-full hover:bg-blue-700' ><Link to={"/login"} >Login</Link></button>
+                            )
                         }
                     </div>
                     
