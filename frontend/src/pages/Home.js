@@ -38,10 +38,10 @@ const Home = () => {
             </div>
 
             <div className='flex flex-row mt-10 justify-center py-3 gap-7 md:clear-both md:mt-10'>
-                   <a href='https://youtube.com' className='text-4xl text-red-600'> <FaYoutube /></a>
-                   <a href='https://youtube.com' className='text-4xl text-blue-600'> <FaFacebook /></a>
-                   <a href='https://youtube.com' className='text-4xl text-green-600'> <FaWhatsapp /></a>
-                   <a href='https://youtube.com' className='text-4xl text-blue-600'> <MdEmail/></a>
+                   <a href='https://youtube.com/@apostlegloryhelenikeleji3559?si=DDicRgBTUCcPFA5s' className='text-4xl text-red-600'> <FaYoutube /></a>
+                   <a href='https://www.facebook.com/christ.goshen.7' className='text-4xl text-blue-600'> <FaFacebook /></a>
+                   <a href='https://www.facebook.com/christ.goshen.7' className='text-4xl text-green-600'> <FaWhatsapp /></a>
+                   <a href='https://www.gmail.com/christgoshencitybethel@gmail.com' className='text-4xl text-blue-600'> <MdEmail/></a>
                 
             </div>
         </div>

@@ -1,4 +1,4 @@
-const backendApi = "http://localhost:3700/api"
+const backendApi = "goshen-webpage.railway.internal"
 
 const GoshenApi = {
     signUp : {
