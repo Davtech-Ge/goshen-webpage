@@ -63,7 +63,7 @@ const SignUp = () => {
                             value={data.username}
                             onChange={handleInput}
                             required
-                            placeholder='Ente your Username'
+                            placeholder='Enter your Username'
                             className='border px-4 py-2 rounded-lg focus:outline-none focus:ring-2'
                          /> 
 
@@ -74,7 +74,7 @@ const SignUp = () => {
                             value={data.email}
                             onChange={handleInput}
                             required
-                            placeholder='Ente your Email'
+                            placeholder='Enter your Email'
                             className='border px-4 py-2 rounded-lg focus:outline-none focus:ring-2'
                          /> 
 

@@ -1,4 +1,4 @@
-const backendApi = "goshen-webpage.railway.internal"
+const backendApi = "https://goshen-webpage-production.up.railway.app"
 
 const GoshenApi = {
     signUp : {
