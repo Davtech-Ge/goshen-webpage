@@ -16,7 +16,7 @@ app.use(cookieParser())
 
 app.use('/api', router)
 
-const PORT = 3700
+const PORT = process.env.PORT || 3700
 
 ConnectDB().then(() => {
     app.listen(PORT, ()=> {
