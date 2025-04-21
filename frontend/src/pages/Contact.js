@@ -63,10 +63,10 @@ const Contact = () => {
     <main className='min-h-[calc(100vh-120px)] bg-teal-100 flex '>
        <aside className=' max-w-9 bg-teal-200 min-h-[calc(100vh-120px)]' >
         <div className='flex flex-col items-baseline mt-72 gap-7'>
-          <a href='https://youtube.com' className='text-4xl text-red-600'> <FaYoutube /></a>
-          <a href='https://youtube.com' className='text-4xl text-blue-600'> <FaFacebook /></a>
-          <a href='https://youtube.com' className='text-4xl text-green-600'> <FaWhatsapp /></a>
-          <a href='https://youtube.com' className='text-4xl text-blue-600'> <MdEmail/></a>
+          <a href='https://youtube.com/@apostlegloryhelenikeleji3559?si=DDicRgBTUCcPFA5s' className='text-4xl text-red-600'> <FaYoutube /></a>
+          <a href='https://www.facebook.com/christ.goshen.7' className='text-4xl text-blue-600'> <FaFacebook /></a>
+          <a href='https://www.facebook.com/christ.goshen.7' className='text-4xl text-green-600'> <FaWhatsapp /></a>
+          <a href='christgoshencitybethel@gmail.com' className='text-4xl text-blue-600'> <MdEmail/></a>
         </div>
       </aside>
       <div className='bg-gray-950 mx-auto md:w-2/6 h-full my-10 rounded-lg'>
