@@ -15,12 +15,12 @@ const Home = () => {
             <div>
             <div className='p-6 bg-blue-800 min-h-60 mx-11 opacity-90 mb-16 shadow-lg rounded-lg md:float-right md:mr-6 md:ml-16 md:w-9/12'>
                 <h1 className='font-bold font-serif text-white text-2xl flex justify-center'>Our Visions</h1>
-                <ul className=' text-amber-100 font-semibold pl-5'>
-                    <li className='mb-3 text-xl'>Winning Souls into God's Kingdom</li>
-                    <li className='mb-3 text-xl'>Helping Men & Women to Shine in the Light of God</li>
-                    <li className='mb-3 text-xl'>Holiness</li>
-                    <li className='mb-3 text-xl'>Making Heaven</li>
-                    <li className='mb-3 text-xl'>Standing For the Truth & Integrity</li>
+                <ul className=' text-amber-100 font-semibold'>
+                    <li className='mb-3 text-l'>Winning Souls into God's Kingdom</li>
+                    <li className='mb-3 text-l'>Helping Men & Women to Shine in the Light of God</li>
+                    <li className='mb-3 text-l'>Holiness</li>
+                    <li className='mb-3 text-l'>Making Heaven</li>
+                    <li className='mb-3 text-l'>Standing For the Truth & Integrity</li>
                 </ul>
             </div>
             </div>
@@ -28,11 +28,11 @@ const Home = () => {
             <div className='p-6 min-h-60 bg-blue-800 mx-11 opacity-90 shadow-lg rounded-lg md:float-left md:w-9/12 mb-16'>
                <div>
                <h1 className='font-bold text-white text-2xl flex justify-center'>Purpose of the Vision</h1>
-                <ul className=' text-amber-100 font-semibold pl-5'>
-                    <li className='mb-3 text-xl'>Restoration of Destinies [1 samuel  30:8, joel 2:25] </li>
-                    <li className='mb-3 text-xl'>Setting the Captives Free [Isaiah 61:11]</li>
-                    <li className='mb-3 text-xl'>Fruitfulness [Genesis 1:28]</li>
-                    <li className='mb-3 text-xl'>Royal Priesthood [1 Peter 2:9]</li>
+                <ul className=' text-amber-100 font-semibold'>
+                    <li className='mb-3 text-l'>Restoration of Destinies [1 samuel  30:8, joel 2:25] </li>
+                    <li className='mb-3 text-l'>Setting the Captives Free [Isaiah 61:11]</li>
+                    <li className='mb-3 text-l'>Fruitfulness [Genesis 1:28]</li>
+                    <li className='mb-3 text-l'>Royal Priesthood [1 Peter 2:9]</li>
                 </ul>
                </div>
             </div>
