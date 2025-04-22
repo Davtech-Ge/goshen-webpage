@@ -8,17 +8,17 @@ const Services = () => {
                 <h1 className='text-3xl font-bold'>Our Service Schedule </h1>
                 
             </div>
-            <div className='p-6 bg-blue-800 mx-11 opacity-90 mb-16 shadow-lg rounded-lg relative md:float-right md:mr-6 md:ml-16 md:w-9/12'>
+            <div className='p-6 bg-blue-800 mx-11 opacity-90 mb-14 shadow-lg rounded-lg relative md:float-right md:mr-6 md:ml-16 md:w-9/12'>
                 <div className='flex justify-center'>
-                <h1 className="text-2xl font-serif font-bold text-white">Goshen City Assembly Head-branch</h1>
+                <h1 className="text-2xl font-bold text-white">Goshen City Assembly Head-branch</h1>
                 </div>
                 <div>
                   <ul className='p-3 gap-10 text-amber-100 font-semibold'>
-                    <li className='mb-3 text-xl'>Hour of prayer =&gt; Mondays [6:15am - 7:15am]</li>
-                    <li className='mb-3 text-xl'>Counseling and Deliverance =&gt; Tuesday [8:00am - 12:00pm] </li>
-                    <li className='mb-3 text-xl'>Bible Study and Holy Communion Service =&gt; Wednesday [5:00pm - 7:00pm]</li>
-                    <li className='mb-3 text-xl'>PUSH (Pray Until Something Happens) =&gt; Friday [5:00pm - 6:00pm]</li>
-                    <li className='mb-3 text-xl'>Sunday Service =&gt; Sunday [7:30am - 10:00am ]</li>
+                    <li className='mb-3 text-l'>Hour of prayer =&gt; Mondays [6:15am - 7:15am]</li>
+                    <li className='mb-3 text-l'>Counseling and Deliverance =&gt; Tuesday [8:00am - 12:00pm] </li>
+                    <li className='mb-3 text-l'>Bible Study and Holy Communion Service =&gt; Wednesday [5:00pm - 7:00pm]</li>
+                    <li className='mb-3 text-l'>PUSH (Pray Until Something Happens) =&gt; Friday [5:00pm - 6:00pm]</li>
+                    <li className='mb-3 text-l'>Sunday Service =&gt; Sunday [7:30am - 10:00am ]</li>
                   </ul>
 
                   <p className='text-amber-100 text-xl font-semibold'>*Venue: Goshen Avenue, Ungwan-Maigero, Kaduna.</p>
@@ -28,15 +28,15 @@ const Services = () => {
 
             <div className='p-6 mb-4 bg-blue-800 min-h-60 mx-11 opacity-90 shadow-lg rounded-lg md:float-left md:w-9/12'>
                 <div className='flex justify-center'>
-                <h1 className="text-2xl font-serif font-bold text-white">Goshen City Assembly Narayi Branch</h1>
+                <h1 className="text-2xl font-bold text-white">Goshen City Assembly Narayi Branch</h1>
                 </div>
                 <div>
                   <ul className='p-3 gap-10 text-amber-100 font-semibold'>
-                    <li className='mb-3 text-xl'>Hour of prayer =&gt; Mondays [6:15am - 7:15am]</li>
-                    <li className='mb-3 text-xl'>Counseling and Deliverance =&gt; Tuesday [8:00am - 12:00pm] </li>
-                    <li className='mb-3 text-xl'>Bible Study and Holy Communion Service =&gt; Wednesday [5:00pm - 7:00pm]</li>
-                    <li className='mb-3 text-xl'>PUSH (Pray Until Something Happens) =&gt; Friday [5:00pm - 6:00pm]</li>
-                    <li className='mb-3 text-xl'>Sunday Service =&gt; Sunday [7:30am - 10:00am ]</li>
+                    <li className='mb-3 text-l'>Hour of prayer =&gt; Mondays [6:15am - 7:15am]</li>
+                    <li className='mb-3 text-l'>Counseling and Deliverance =&gt; Tuesday [8:00am - 12:00pm] </li>
+                    <li className='mb-3 text-l'>Bible Study and Holy Communion Service =&gt; Wednesday [5:00pm - 7:00pm]</li>
+                    <li className='mb-3 text-l'>PUSH (Pray Until Something Happens) =&gt; Friday [5:00pm - 6:00pm]</li>
+                    <li className='mb-3 text-l'>Sunday Service =&gt; Sunday [7:30am - 10:00am ]</li>
                   </ul>
 
                   <p className='text-amber-100 text-xl font-semibold'>*Venue: Perry Plaza, Cinema Road, Narayi Kaduna.</p>
