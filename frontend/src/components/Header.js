@@ -83,12 +83,12 @@ useEffect(() => {
                             className='fixed inset-0 bg-slate-300 bg-opacity-50 backdrop-blur-sm z-40 
                              ' onClick={()=> setDisplayMenuIcon(false)}
                         />    
-                            <div className='absolute -mt-36 min-h-screen left-0 bg-slate-300 rounded-lg shadow-lg sm:min-w-fit md:max-w-96 z-50'>
+                            <div className='absolute -mt-36 min-h-screen left-0 bg-slate-300 rounded-lg shadow-lg min-w-96 z-50'>
                                 <ul className='p-6 mt-10 text-gray-800'>
-                                <li className='px-3 py-2 mb-4 text-2xl '><Link to={"/services"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Our Services</Link></li>
-                                <li className='px-3 py-2 mb-4 text-2xl '><Link to={"/messages"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Messages</Link></li>
-                                <li className='px-3 py-2 mb-4 text-2xl'><Link to={"/contact"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Contact Us</Link></li>
-                                <li className='px-3 py-2 mb-4 text-2xl '><Link to={"/services"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>About Us</Link></li>                              
+                                <li className='px-4 py-2 mb-4 text-2xl '><Link to={"/services"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Our Services</Link></li>
+                                <li className='px-4 py-2 mb-4 text-2xl '><Link to={"/messages"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Messages</Link></li>
+                                <li className='px-4 py-2 mb-4 text-2xl'><Link to={"/contact"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Contact Us</Link></li>
+                                <li className='px-4 py-2 mb-4 text-2xl '><Link to={"/services"} className='border-gray-400 border shadow-lg hover:bg-slate-400 rounded-lg p-2'>About Us</Link></li>                              
                                 </ul>
                             </div>
                         </>

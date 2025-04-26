@@ -11,7 +11,7 @@ const Boxes = () => {
             {boxes.map((box, index) => (
                 <div 
                 key={index}
-                className='flex-shrink-0 w-80 h-56 bg-teal-200 text-black flex items-center justify-center text-2xl font-bold rounded-lg shadow-xl shadow-gray-700'>
+                className='flex-shrink-0 w-80 h-56 bg-teal-200 text-black flex items-center justify-center text-2xl font-bold rounded-lg shadow-lg shadow-black'>
                    {box}
                 </div>
             ))}
