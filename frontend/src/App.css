@@ -24,3 +24,17 @@
   width: 100%;
   height: 100%;
 }
+
+.seed {
+  background-image: url('./logo/edited2.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.fellowship {
+  background-image: url('./logo/homecell.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { motion, ani } from 'framer-motion';
 
 const image =[
     '/images/image.png',
@@ -33,7 +32,7 @@ const ImageSlide = () => {
     <div className='relative w-full min-h-screen mx-auto overflow-hidden rounded-b-lg shadow-lg shadow-gray-800'>
         {prev && 
         <img src={image[prev]} alt={image[prev]} 
-        className=' absolute inset-0 w-full max-h-screen min-h-screen object-cover transition-opacity duration-1000 opacity-100'
+        className=' absolute inset-0 w-full max-h-screen min-h-screen object-cover transition-opacity duration-1000 opacity-100 animate-fadeOut'
          />
         }
         <img src={image[current]} alt={image[current]} 
@@ -42,7 +41,7 @@ const ImageSlide = () => {
 
             <button onClick={prevSlide} 
                 disabled={current === 0}
-               className='absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full'>
+               className='absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full '>
                 &lt;
             </button>
             <button onClick={nextSlide} 
