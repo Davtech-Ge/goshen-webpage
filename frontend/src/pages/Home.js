@@ -1,14 +1,36 @@
 
 import { FaYoutube, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import { MdEmail} from 'react-icons/md'
+import ImageSlide from '../components/imageSlide';
+
+//motion
+import {motion} from 'framer-motion'
+//variants
+import {fadeIn} from '../components/Variant'
+import Boxes from './boxes';
 
 
 const Home = () => {
   return (
-    <main className='bg-teal-100 min-h-[calc(100vh-80px)] h-full overflow-x-scroll'>
+    <main className='min-h-[calc(100vh-80px)] h-full overflow-x-scroll bg-purple-900'>
+        <div className='bg-purple-900 max-h-screen flex items-center justify-center'>
+            <div className='flex items-center justify-center w-screen min-h-screen'>
+                 <ImageSlide />
+            </div>
+        </div>
+
+        <div className='w-full'>
+            <Boxes />
+        </div>
         <div>
             <div className='p-4 text-2xl mt-4'>
-                <h1 className='font-semibold text-3xl'>Welcome to Christ Goshen City Assembly</h1>
+                <motion.h1 
+                     variants={fadeIn("right", 0.4)}
+                     initial='hidden'
+                     whileInView={"show"}
+                     viewport={{once: false, amount: 0.7}}
+
+                className='font-semibold text-3xl'>Welcome to Christ Goshen City Assembly</motion.h1>
                 <p className='text-2xl'>The place of encounter and transformation, where destinies are liberated.</p><br />
             </div>
 

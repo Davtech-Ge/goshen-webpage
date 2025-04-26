@@ -49,14 +49,14 @@ const Login = () => {
   return (
     <section id='login'>
        <div className='container p-20 mx-auto w-full'>
-         <div className='p-5 max-w-sm mx-auto w-full bg-blue-300 shadow-md rounded'>
+         <div className='p-5 max-w-sm mx-auto w-full bg-gray-800 shadow-md rounded'>
             <div className=' h-15 w-10 ml-3 mb-6'>
-                    <h1 className='text-2xl font-bold text-center text-gray-800'>Login</h1>
+                    <h1 className='text-2xl font-bold text-center text-white'>Login</h1>
             </div>
             <div>
                 <div>
                      <form className='flex flex-col gap-3' onSubmit={handleSubmit}>
-                         <label htmlFor='username'>User :</label>
+                         <label htmlFor='username' className='text-white font-semibold'>User :</label>
                          <input 
                             type='text'
                             name='username'
@@ -67,7 +67,7 @@ const Login = () => {
                             className='border px-4 py-2 rounded-lg focus:outline-none focus:ring-2'
                          /> 
 
-                        <label htmlFor='password'>Password :</label>
+                        <label htmlFor='password' className='text-white font-semibold'>Password :</label>
                         <div className=' relative'>
                             <div>
                                     <input 
@@ -95,11 +95,11 @@ const Login = () => {
                             </div>
 
                         </div>
-                        <button className='w-full mt-3 transition duration-200 bg-gray-600 px-4 py-2 rounded-lg font-bold hover:bg-gray-700'>Submit</button>
+                        <button className='w-full mt-3 transition duration-200 bg-blue-600 px-4 py-2 rounded-lg font-bold hover:bg-blue-700'>Submit</button>
                     </form>
 
                     <div className='flex mt-4'>
-                        <p className='text-gray-600'>Don't have an account ?</p>
+                        <p className='text-white'>Don't have an account ?</p>
                         <Link to={"/signup"} className='hover:underline text-purple-700'>Sign Up</Link>
                     </div>
                 </div>

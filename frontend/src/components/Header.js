@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import LogoIcon from '../logo/image.png'
 import { Link } from 'react-router-dom'
 import { FiMenu, FiX } from 'react-icons/fi'
@@ -8,97 +8,99 @@ import ROLES from '../common/roles'
 import GoshenApi from '../api'
 import { toast } from 'react-toastify'
 
+
 const Header = () => {
-    const [displayMenuIcon, setDisplayMenuIcon] = useState(false)
+     const [displayMenuIcon, setDisplayMenuIcon] = useState(false)
+     const [hideIcons, setHideIcons] = useState(false)
 
-    const dispatch = useDispatch();
-    const User = useSelector(state => state?.user.user?.data);
+    // const dispatch = useDispatch();
+    // const User = useSelector(state => state?.user.user?.data);
 
-    const handleLogout = async () => {
-        try {
-         const fetchApi = await fetch(GoshenApi.logOut.url, {
-            method: GoshenApi.logOut.method,
-            credentials: 'include',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
+//     const handleLogout = async () => {
+//         try {
+//          const fetchApi = await fetch(GoshenApi.logOut.url, {
+//             method: GoshenApi.logOut.method,
+//             credentials: 'include',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//         });
 
-         if (!fetchApi.ok) {
-            throw new Error('Network response was not ok');
-        }
+//          if (!fetchApi.ok) {
+//             throw new Error('Network response was not ok');
+//         }
 
-        const data = await fetchApi.json();
+//         const data = await fetchApi.json();
 
-        if (data.success) {
-            toast.success(data.message);
-            dispatch(setUserDetails(null));
-        } else if (data.error) {
-            toast.error(data.message);
-        }
-    } catch (error) {
-        console.error('Logout failed:', error);
-        toast.error('Failed to log out. Please try again.');
+//         if (data.success) {
+//             toast.success(data.message);
+//             dispatch(setUserDetails(null));
+//         } else if (data.error) {
+//             toast.error(data.message);
+//         }
+//     } catch (error) {
+//         console.error('Logout failed:', error);
+//         toast.error('Failed to log out. Please try again.');
+//     }
+//    }
+useEffect(() => {
+    const handleScroll = () => {
+        if (window.scrollY < 100){
+            setHideIcons(true)
+    } else {
+        setHideIcons(false)
     }
-   }
+}
+        window.addEventListener('scroll', handleScroll)
+}, []);
+ 
 
   return (
-   <header className='h-full w-full'>
-    <div className='coverPhoto text-amber-100 shadow-md font-serif font-bold h-24'>   
-    <div className='p-4 flex items-center mx-auto justify-between '>
-    <div>
-        <div className='p-2 '>
-           <div className='flex pb-4'>
-            <img src={LogoIcon} alt='CGCA' width={60} height={60} className='rounded-full' />
+   <header className='fixed top-0 z-10 bg-transparent w-full'> 
+    {hideIcons && (
+       <>
+        <div className='p-4 flex items-center justify-between'>
+            <div className='p-4 flex justify-start'>
+                <img src={LogoIcon} alt='CGCA' width={50} height={50} className='rounded-full shadow-lg' />
             </div>
-        </div>
-    </div>
-
+            <div className='p-4 flex justify-between'>
+                <button className='bg-purple-800 text-white px-4 py-2 rounded-md' onClick={() => setDisplayMenuIcon(!displayMenuIcon)}>
+                {displayMenuIcon ? <FiX size={16} /> : <FiMenu size={16} />}
+                </button> 
+            </div>
+         </div>
+       </>
+    )}
+     <div>
     <nav>
-        <div className='items-center gap-6 flex'>
-        <div className='relative justify-center hidden md:flex'>
-                    <Link to={"/"} className='mx-2'>Home</Link>
-                    <Link to={"/services"} className='mx-2'>Our Services</Link>
-                    <Link to={"/messages"} className='mx-2'>Messages</Link>
-                    <Link to={"/contact"} className='mx-2'>Contact Us</Link>
-                    <div>
-                        {
-                            User?.role === ROLES.ADMIN && ( <Link to={'/user'}>Dashboard</Link>) 
-
-                        }
-                    </div>
-                    <div>
-                        {
-                            User?._id ? (
-                                <button className='mx-2 bg-blue-600 px-2 py-1 rounded-full hover:bg-blue-700' onClick={handleLogout}>LogOut</button>
-                            ) : (
-                                <button className='mx-2 bg-blue-600 px-2 py-1 rounded-full hover:bg-blue-700' ><Link to={"/login"} >Login</Link></button>
-                            )
-                        }
-                    </div>
+        <div className='flex justify-start items-start'>
+                <div className='relative z-50'>
                     
-                </div>
-                <div>
-                    <button className='flex md:hidden focus:outline-none relative mx-6 mb-4' onClick={() => setDisplayMenuIcon(!displayMenuIcon)}>
-                        {displayMenuIcon ? <FiX size={24} /> : <FiMenu size={24}/>}
-                    </button> 
                 {
                     displayMenuIcon && (
-                        <div className='md:hidden flex flex-col mt-3 pt-2 px-4 space-y-3 pb-2 rounded-md justify-between opacity-95 coverPhoto bg-gray-800 z-50 text-black absolute' onClick={()=> setDisplayMenuIcon(false)}>
-                            <Link to={"/"} className='mr-7 text-teal-300'>Home</Link>
-                            <Link to={"/services"} className='mr-9 text-teal-300'>Our Services</Link>
-                            <Link to={"/messages"} className='mr-7 text-teal-300'>Messages</Link>
-                            <Link to={"/contact"} className='mr-7 text-teal-300'>Contact Us</Link>
-                            <Link to={"/services"} className='mr-7 text-teal-300'>About Us</Link>
-                        </div>
+                        <>
+                        <div 
+                            className='fixed inset-0 bg-slate-300 bg-opacity-50 backdrop-blur-sm z-40 
+                             ' onClick={()=> setDisplayMenuIcon(false)}
+                        />    
+                            <div className='absolute -mt-36 min-h-screen left-0 bg-slate-300 rounded-lg shadow-lg sm:min-w-fit md:max-w-96 z-50'>
+                                <ul className='p-6 mt-10 text-gray-800'>
+                                <li className='px-3 py-2 mb-4 text-2xl '><Link to={"/services"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Our Services</Link></li>
+                                <li className='px-3 py-2 mb-4 text-2xl '><Link to={"/messages"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Messages</Link></li>
+                                <li className='px-3 py-2 mb-4 text-2xl'><Link to={"/contact"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Contact Us</Link></li>
+                                <li className='px-3 py-2 mb-4 text-2xl '><Link to={"/services"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>About Us</Link></li>                              
+                                </ul>
+                            </div>
+                        </>
+                        
                     )
                 } 
                 </div>
                 
         </div>
-    </nav>
+    </nav>  
     </div>
-    </div>
+
    </header>
   )
 }
