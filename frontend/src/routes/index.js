@@ -8,6 +8,7 @@ import Dashboard from '../pages/Dashboard'
 import AllMessages from "../pages/AllMessages";
 import Contact from "../pages/Contact";
 import Messages from "../pages/Messages";
+import Boxes from "../pages/Boxes";
 
 const router = createBrowserRouter([
     {

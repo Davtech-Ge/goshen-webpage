@@ -7,33 +7,22 @@ import ImageSlide from '../components/imageSlide';
 import {motion} from 'framer-motion'
 //variants
 import {fadeIn} from '../components/Variant'
-import Boxes from './boxes';
+import Boxes from './Boxes';
 
 
 const Home = () => {
   return (
-    <main className='min-h-[calc(100vh-80px)] h-full overflow-x-scroll bg-purple-900'>
+    <main className='min-h-[calc(100vh-80px)] h-full overflow-x-scroll background'>
         <div className='bg-purple-900 max-h-screen flex items-center justify-center'>
             <div className='flex items-center justify-center w-screen min-h-screen'>
                  <ImageSlide />
             </div>
         </div>
 
-        <div className='w-full'>
+        <section className='w-full mt-2 mx-auto'>
             <Boxes />
-        </div>
+        </section>
         <div>
-            <div className='p-4 text-2xl mt-4'>
-                <motion.h1 
-                     variants={fadeIn("right", 0.4)}
-                     initial='hidden'
-                     whileInView={"show"}
-                     viewport={{once: false, amount: 0.7}}
-
-                className='font-semibold text-3xl'>Welcome to Christ Goshen City Assembly</motion.h1>
-                <p className='text-2xl'>The place of encounter and transformation, where destinies are liberated.</p><br />
-            </div>
-
             <div>
             <div className='p-6 bg-blue-800 min-h-60 mx-11 opacity-90 mb-16 shadow-lg rounded-lg md:float-right md:mr-6 md:ml-16 md:w-9/12'>
                 <h1 className='font-bold font-serif text-white text-2xl flex justify-center'>Our Visions</h1>

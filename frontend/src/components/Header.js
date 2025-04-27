@@ -88,7 +88,7 @@ useEffect(() => {
                                 <li className='px-4 py-2 mb-4 text-2xl '><Link to={"/services"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Our Services</Link></li>
                                 <li className='px-4 py-2 mb-4 text-2xl '><Link to={"/messages"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Messages</Link></li>
                                 <li className='px-4 py-2 mb-4 text-2xl'><Link to={"/contact"} className='border-gray-400 border shadow-lg  hover:bg-slate-400 rounded-lg p-2'>Contact Us</Link></li>
-                                <li className='px-4 py-2 mb-4 text-2xl '><Link to={"/services"} className='border-gray-400 border shadow-lg hover:bg-slate-400 rounded-lg p-2'>About Us</Link></li>                              
+                                <li className='px-4 py-2 mb-4 text-2xl '><a href='/boxes' to={"/boxes"} className='border-gray-400 border shadow-lg hover:bg-slate-400 rounded-lg p-2'>About Us</a></li>                              
                                 </ul>
                             </div>
                         </>

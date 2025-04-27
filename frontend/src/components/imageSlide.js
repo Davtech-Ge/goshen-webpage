@@ -32,11 +32,11 @@ const ImageSlide = () => {
     <div className='relative w-full min-h-screen mx-auto overflow-hidden rounded-b-lg shadow-lg shadow-gray-800'>
         {prev && 
         <img src={image[prev]} alt={image[prev]} 
-        className=' absolute inset-0 w-full max-h-screen min-h-screen object-cover transition-opacity duration-1000 opacity-100 animate-fadeOut'
+        className=' absolute inset-0 w-full max-h-screen min-h-screen object-cover transition-opacity duration-1000 opacity-100 animate-fadeIn'
          />
         }
         <img src={image[current]} alt={image[current]} 
-        className='absolute inset-0 w-full max-h-screen min-h-screen object-cover transition-opacity duration-1000 opacity-0 animate-fadeIn'
+        className='absolute inset-0 w-full max-h-screen min-h-screen object-cover transition-opacity duration-700 opacity-0 animate-fadeIn'
          />
 
             <button onClick={prevSlide} 
