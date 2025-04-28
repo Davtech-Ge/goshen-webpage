@@ -7,11 +7,11 @@ const Boxes = () => {
         <Messages background={'seed'} heading={"Watch Live"} action={"LIVESTREAM"} link={"/messages"}/>,
         <Messages background={'seed'} heading={"Seed, Tithes and Offering"} action={"GIVE"} link={"/messages"}/>,
         <Messages background={'fellowship'} heading={"Join our Fellowship"} action={"JOIN"} link={"/messages"}/>,
-        <Messages background={'seed'} heading={"External Ministration"} action={"EVENT"} link={"/messages"}/>,
+        <Messages background={'event'} heading={"External Ministration"} action={"EVENT"} link={"/messages"}/>,
         <Messages background={'seed'} heading={"Gallery"} action={"PHOTOS"} link={"/messages"}/>,
-        <Messages background={'seed'} heading={"About Goshen City"} action={"INFO"} link={"/messages"}/>,
-        <Messages background={'seed'} heading={"School of Ministry"} action={"Coming Soon"} link={""}/>,
-        <Messages background={'seed'} heading={"Reach Out"} action={"CONTACT"} link={"/messages"}/>,
+        <Messages background={'about'} heading={"About Goshen City"} action={"INFO"} link={"/messages"}/>,
+        <Messages background={'school'} heading={"School of Ministry"} action={"COMING SOON"} link={""}/>,
+        <Messages background={'contact'} heading={"Reach Out"} action={"CONTACT"} link={"/messages"}/>,
     ]
   return (
     <div className='w-screen mx-auto overflow-x-auto'>
@@ -32,8 +32,8 @@ const Messages = ({heading, action, link, background}) => {
     return (
     <Link to={link} className={`${background} messages flex relative flex-col rounded-xl`}>
         <div>
-                <h1 className='absolute bottom-14 p-3 text-white text-lg font-light flex '>{heading}</h1>
-                <button className='absolute bottom-3 font-light text-lg flex p-4 shadow-lg text-white'>
+                <h1 className='absolute bottom-10 p-2 font-bold text-white text-sm flex '>{heading}</h1>
+                <button className='absolute bottom-3 font-light text-xs flex p-2 shadow-lg text-white'>
                     {action}
                 </button>
          

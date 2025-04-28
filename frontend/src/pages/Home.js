@@ -1,53 +1,99 @@
-
 import { FaYoutube, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import { MdEmail} from 'react-icons/md'
-import ImageSlide from '../components/imageSlide';
-
-//motion
-import {motion} from 'framer-motion'
-//variants
-import {fadeIn} from '../components/Variant'
 import Boxes from './Boxes';
-
+import Image from '../components/Image'
+import Livestream from '../components/Livestream';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+    const [selectedButton, setSelectedButton] = useState(null);
+    const handleClick = (buttonId) => {
+        setSelectedButton(buttonId)
+    };
   return (
     <main className='min-h-[calc(100vh-80px)] h-full overflow-x-scroll background'>
-        <div className='bg-purple-900 max-h-screen flex items-center justify-center'>
-            <div className='flex items-center justify-center w-screen min-h-screen'>
-                 <ImageSlide />
+        <div className='bg-gray-800 flex items-center justify-center'>
+            <div className='flex items-center justify-center w-full h-[80vh]'>
+                <Image />
             </div>
         </div>
 
+        <div>
+            <div className='relative flex clear-both w-full bg-slate-950'>
+                <div className='bg-slate-950 text-white clear-both'>
+                   {
+                        selectedButton === null && ( <Livestream number={1}/>)
+                   }
+                    {
+                        selectedButton === 1 && (<Livestream number={1}/>)
+                    }
+                    {
+                        selectedButton === 2 && (<Livestream number={2}/>)
+                    }
+                    {
+                        selectedButton === 3 && (<Livestream number={3}/>)
+                    }
+                </div>
+            <div className='flex w-full grid-flow-row'>
+                <button onClick={() => handleClick(1)} className='text-white'>Stream Live</button>
+                <button onClick={() => handleClick(2)} className='text-white'>Watch our Live</button>
+                <button onClick={() => handleClick(3)} className='text-white'>Give seed, tithe, offering</button>
+            </div>
+        </div>
+        </div>
+
+        <div className='text-white'>
+           <Link to={'/about'} >
+             <img src='../logo/edited2.png' alt='About us' className='relative w-full h-40 object-cover '/>
+             <div>
+             <h1>ABOUT US</h1>
+             <p>Christ Goshen is a weekly Apostolic and prophetic platform where people come to experience the Word, Worship, Miracle and Love. The revelatory teachings help believers to experience true intimacy with the Holy Spirit and learn to be with Him, be like Him and Represent Him</p>
+
+             <button>LEARN MORE</button>
+             </div>
+           </Link>
+        </div>
+
         <section className='w-full mt-2 mx-auto'>
+            <h1 className='text-white'>GOSHEN LINKS</h1>
             <Boxes />
         </section>
+
         <div>
+            <div className='text-white'>
+                <h1>GSOM</h1>
+                <h1>Goshen School of Ministry</h1>
+                <p>The Goshen School of Ministry (GSOM) is a programme organised by Christ Goshen City with the vision of raising kingdom ambassadors to transform the society. We seek to raise, train and equip kingdom ambassadors who will represent Christ and His agenda in any/every sphere of influence they find themselves</p>
+
+                <button>REGISTER</button>
+            </div>
+        </div>
+
+        <div className='text-white'>
+            <h1>LOCATIONS</h1>
+            <p>We are <span>one church</span> with two branches in Kaduna</p>
+
             <div>
-            <div className='p-6 bg-blue-800 min-h-60 mx-11 opacity-90 mb-16 shadow-lg rounded-lg md:float-right md:mr-6 md:ml-16 md:w-9/12'>
-                <h1 className='font-bold font-serif text-white text-2xl flex justify-center'>Our Visions</h1>
-                <ul className=' text-amber-100 font-semibold'>
-                    <li className='mb-3 text-l'>Winning Souls into God's Kingdom</li>
-                    <li className='mb-3 text-l'>Helping Men & Women to Shine in the Light of God</li>
-                    <li className='mb-3 text-l'>Holiness</li>
-                    <li className='mb-3 text-l'>Making Heaven</li>
-                    <li className='mb-3 text-l'>Standing For the Truth & Integrity</li>
-                </ul>
+                <h1><Link to={'/'} >Maigero </Link></h1>
+                <h1><Link to={'/'} >Narayi </Link></h1>
             </div>
-            </div>
+        </div>
 
-            <div className='p-6 min-h-60 bg-blue-800 mx-11 opacity-90 shadow-lg rounded-lg md:float-left md:w-9/12 mb-16'>
-               <div>
-               <h1 className='font-bold text-white text-2xl flex justify-center'>Purpose of the Vision</h1>
-                <ul className=' text-amber-100 font-semibold'>
-                    <li className='mb-3 text-l'>Restoration of Destinies [1 samuel  30:8, joel 2:25] </li>
-                    <li className='mb-3 text-l'>Setting the Captives Free [Isaiah 61:11]</li>
-                    <li className='mb-3 text-l'>Fruitfulness [Genesis 1:28]</li>
-                    <li className='mb-3 text-l'>Royal Priesthood [1 Peter 2:9]</li>
-                </ul>
-               </div>
-            </div>
+        <div>
+            <div className='text-white'> 
+                <img src='../logo/externalminis.jpg' alt='testimonies' className='w-full h-45 object-cover relative' />
+                <h1>TESTIMONIES</h1>
+                <h1>(FAITH STORIES)</h1>
 
+                <p>We welcome testimonies from our online viewers connecting across the world. please share your testimonies with us via:</p>
+                <p>christgoshencitybethel@gmail.com</p>
+                <button>SEND TESTIMONY</button>
+            </div>
+        </div>
+
+        <div>
+            
             <div className='flex flex-row justify-center py-3 gap-7 md:clear-both md:mt-10'>
                    <a href='https://youtube.com/@apostlegloryhelenikeleji3559?si=DDicRgBTUCcPFA5s' className='text-4xl text-red-600'> <FaYoutube /></a>
                    <a href='https://www.facebook.com/christ.goshen.7' className='text-4xl text-blue-600'> <FaFacebook /></a>

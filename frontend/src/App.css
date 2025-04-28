@@ -19,7 +19,7 @@
 }
 
 .messages {
-  background-image: url('./logo/edited1.png');
+  background-image: url('./logo/1745803848598.jpg');
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -27,6 +27,34 @@
 
 .seed {
   background-image: url('./logo/edited2.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.event {
+  background-image: url('./logo/externalminis.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.about {
+  background-image: url('./logo/aboutGosh.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.school {
+  background-image: url('./logo/GoshenSChool.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.contact {
+  background-image: url('./logo/reachout.png');
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -46,4 +74,21 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(180deg, #01012e, #210141);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(180deg, #010124, #1b0235);
 }

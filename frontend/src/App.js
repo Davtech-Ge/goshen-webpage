@@ -12,28 +12,28 @@ import { useEffect } from 'react';
 
 
 function App() {
-  const dispatch = useDispatch()
-const fetchUserDetails = async () => {
-      const fetchApi = await fetch(GoshenApi.currentuser.url, {
-        method : GoshenApi.currentuser.method,
-        credentials : 'include'
-      })
+//   const dispatch = useDispatch()
+// const fetchUserDetails = async () => {
+//       const fetchApi = await fetch(GoshenApi.currentuser.url, {
+//         method : GoshenApi.currentuser.method,
+//         credentials : 'include'
+//       })
 
-      const response = await fetchApi.json()
+//       const response = await fetchApi.json()
 
-      if (response.success){
-        dispatch(setUserDetails(response))
-      }
-}
+//       if (response.success){
+//         dispatch(setUserDetails(response))
+//       }
+// }
 
-useEffect(() => {
-  fetchUserDetails();
-}, [])
+// useEffect(() => {
+//   fetchUserDetails();
+// }, [])
 
   return (
     <>
     <Context.Provider value={{
-      fetchUserDetails
+      // fetchUserDetails
     }} >
       <ToastContainer />
     <Header />
