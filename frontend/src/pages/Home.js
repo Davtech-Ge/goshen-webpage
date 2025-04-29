@@ -13,11 +13,11 @@ const Home = () => {
             <div className='flex items-center justify-center w-full h-[80vh]'>
                 <Image />
             </div>
+        </div>
 
-            <div>
-                <LatestFeatures />
-                <AboutUS />
-            </div>
+        <div>
+            <LatestFeatures />
+            <AboutUS />
         </div>
 
         <section className='w-full mt-2 mx-auto'>
