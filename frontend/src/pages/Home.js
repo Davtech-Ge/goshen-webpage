@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <main className='min-h-[calc(100vh-80px)] h-full overflow-x-scroll'>
         <div className='bg-gray-800 flex items-center justify-center'>
-            <div className='flex items-center justify-center w-full h-[80vh]'>
+            <div className='flex items-center justify-center w-full h-42'>
                 <Image />
             </div>
         </div>
@@ -47,7 +47,7 @@ const Home = () => {
 
         <div>
             <div className='text-white'> 
-                <img src='../logo/externalminis.jpg' alt='testimonies' className='w-full h-45 object-cover relative' />
+                <img src='/images/externalminis.jpg' alt='testimonies' className='w-full h-45 object-cover relative' />
                 <h1>TESTIMONIES</h1>
                 <h1>(FAITH STORIES)</h1>
 

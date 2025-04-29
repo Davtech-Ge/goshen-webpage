@@ -4,7 +4,7 @@ const AboutUS = () => {
   return (
     <section className='bg-black text-white py-12 px-4'>
         <div className='max-w-5xl mx-auto flex flex-col md:flex-row items-center'>
-            <img src='../logo/aboutGosh.jpg' alt='Apostle glory helen'  className='rounded-lg w-full md:w-1/2 mb-6 md:mb-0 md:mr-8' />
+            <img src='/images/aboutGosh.jpg' alt='Apostle glory helen'  className='rounded-lg w-full md:w-1/2 mb-6 md:mb-0 md:mr-8' />
             <div className='md:w-1/2'>
                 <h2 className='text-2xl font-semibold mb-4'>Christ Goshen city Assembly</h2>
                 <p className='text-gray-300 mb-4'>

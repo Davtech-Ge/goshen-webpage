@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { BsArrowUp } from 'react-icons/bs'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const LatestFeatures = () => {
 
@@ -16,7 +16,7 @@ const LatestFeatures = () => {
                 {
                     selectedButton === null && (
                         <MessageIcon 
-                            picture={'../logo/watchLive.jpg'}
+                            picture={'/images/watchLive.jpg'}
                             pTag={'Keys to The Supernatural'}
                             HTag={'Keys to the Supernatural by Apostle Glory Helen Ikeleji during the Goshen Sunday Service'}
                             Buttontag={'Watch Now'}
@@ -26,7 +26,7 @@ const LatestFeatures = () => {
                  {
                     selectedButton === 1 && (
                         <MessageIcon 
-                        picture={'../logo/watchLive.jpg'} 
+                        picture={'/images/watchLive.jpg'} 
                         pTag={'Keys to The Supernatural'}
                         HTag={'Keys to the Supernatural by Apostle Glory Helen Ikeleji during the Goshen Sunday Service'}
                         Buttontag={'Watch Now'}
@@ -36,7 +36,7 @@ const LatestFeatures = () => {
                  {
                     selectedButton === 2 && (
                         <MessageIcon 
-                        picture={'../logo/watchLive.jpg'} 
+                        picture={'/images/watchLive.jpg'} 
                         pTag={'Keys to the Supernatural by Apostle Glory Helen Ikeleji during the Goshen Sunday Service'}
                         HTag={'Watch us Live'}
                         Buttontag={'Watch Now'}
@@ -46,7 +46,7 @@ const LatestFeatures = () => {
                  {
                     selectedButton === 3 && (
                         <MessageIcon 
-                        picture={'../logo/watchLive.jpg'} 
+                        picture={'/images/watchLive.jpg'} 
                         pTag={'Sow your seeds, tithes and Offering'}
                         HTag={'Keys to the Supernatural by Apostle Glory Helen Ikeleji during the Goshen Sunday Service'}
                         Buttontag={'See Details'}
@@ -58,19 +58,19 @@ const LatestFeatures = () => {
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-center'>
                 <button onClick={() => handleClick(1)} className='bg-gray-800 py-6 px-4 rounded'>
-                    <div className='text-2xl mb-2'><BsArrowUp /></div>
+                    <div className='text-2xl mb-2'><FontAwesomeIcon icon='fa-solid fa-up-from-line' /></div>
                     <h4 className='text-lg font-semibold'>Featured Sermon</h4>
                     <p className='text-gray-400 text-sm'>APOSTLE GLORY HELEN IKELEJI</p>
                 </button>
 
                 <button onClick={() => handleClick(2)} className='bg-gray-800 py-6 px-4 rounded'>
-                    <div className='text-2xl mb-2'><BsArrowUp /></div>
+                    <div className='text-2xl mb-2'><FontAwesomeIcon icon='fa-solid fa-up-from-line' /></div>
                     <h4 className='text-lg font-semibold'>Watch us LIVE</h4>
                     <p className='text-gray-400 text-sm'>CHRIST GOSHEN EXPERIENCE</p>
                 </button>
 
                 <button onClick={() => handleClick(3)} className='bg-gray-800 py-6 px-4 rounded'>
-                    <div className='text-2xl mb-2'><BsArrowUp /></div>
+                    <div className='text-2xl mb-2'><FontAwesomeIcon icon='fa-solid fa-up-from-line' /></div>
                     <h4 className='text-lg font-semibold'>Give</h4>
                     <p className='text-gray-400'>SEED, TITHES, OFFERINGS</p>
                 </button>
