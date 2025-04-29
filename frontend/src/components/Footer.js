@@ -25,7 +25,7 @@ const Footer = () => {
               <p>Perry Plaza<br />Cinema Road, Narayi Kaduna, Nigeria</p>
               <p className='mt-2'>+2348036155180</p>
             </div>
-              <a href='mailto:christgoshencitybethel@gmail.com?subject=Information Request&body=Hello Goshen City, I am will like to get an information concerning...' className='text-yellow-400 font-semibold mt-2 inline-block'>Contact Us</a>
+              <a href='mailto:christgoshencitybethel@gmail.com?subject=Information Request&body=Hello Goshen City, I am will like to get an information concerning...' className='text-yellow-400 border p-2 border-yellow-400 rounded-full font-semibold mt-2 inline-block'>Contact Us</a>
           </div>
 
           {/* Link sections */}
