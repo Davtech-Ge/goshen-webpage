@@ -3,9 +3,13 @@ import background from '../logo/edited2.png'
 
 const Image = () => {
     return (
-        <div className='flex w-full h-52 object-fill'>
-            <img src={background} alt={background} className=' object-cover overflow-hidden w-full h-42 '/>
-        </div>
+        <section className='bg-black py-10 px-4'>
+            <div className='max-w-5xl mx-auto'>
+                <div className='mb-6 over-hidden rounded-lg shadow-lg'>
+                <img src={background} alt={background} className=' w-full'/>
+                </div>
+            </div>
+        </section>
     )
 }
 
