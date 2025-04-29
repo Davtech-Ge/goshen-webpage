@@ -1,5 +1,3 @@
-import { FaYoutube, FaFacebook, FaWhatsapp } from 'react-icons/fa';
-import { MdEmail} from 'react-icons/md'
 import Boxes from './Boxes';
 import Image from '../components/Image'
 import Livestream from '../components/Livestream';
@@ -12,7 +10,7 @@ const Home = () => {
         setSelectedButton(buttonId)
     };
   return (
-    <main className='min-h-[calc(100vh-80px)] h-full overflow-x-scroll background'>
+    <main className='min-h-[calc(100vh-80px)] h-full overflow-x-scroll'>
         <div className='bg-gray-800 flex items-center justify-center'>
             <div className='flex items-center justify-center w-full h-[80vh]'>
                 <Image />
@@ -89,17 +87,6 @@ const Home = () => {
                 <p>We welcome testimonies from our online viewers connecting across the world. please share your testimonies with us via:</p>
                 <p>christgoshencitybethel@gmail.com</p>
                 <button>SEND TESTIMONY</button>
-            </div>
-        </div>
-
-        <div>
-            
-            <div className='flex flex-row justify-center py-3 gap-7 md:clear-both md:mt-10'>
-                   <a href='https://youtube.com/@apostlegloryhelenikeleji3559?si=DDicRgBTUCcPFA5s' className='text-4xl text-red-600'> <FaYoutube /></a>
-                   <a href='https://www.facebook.com/christ.goshen.7' className='text-4xl text-blue-600'> <FaFacebook /></a>
-                   <a href='https://www.facebook.com/christ.goshen.7' className='text-4xl text-green-600'> <FaWhatsapp /></a>
-                   <a href='https://www.gmail.com/christgoshencitybethel@gmail.com' className='text-4xl text-blue-600'> <MdEmail/></a>
-                
             </div>
         </div>
     </main>
