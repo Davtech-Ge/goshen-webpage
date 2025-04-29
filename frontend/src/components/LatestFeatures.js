@@ -36,7 +36,7 @@ const LatestFeatures = () => {
                  {
                     selectedButton === 2 && (
                         <MessageIcon 
-                        picture={'/images/watchLive.jpg'} 
+                        picture={'/images/externalminis.jpg'} 
                         pTag={'Keys to the Supernatural by Apostle Glory Helen Ikeleji during the Goshen Sunday Service'}
                         HTag={'Watch us Live'}
                         Buttontag={'Watch Now'}
@@ -46,9 +46,9 @@ const LatestFeatures = () => {
                  {
                     selectedButton === 3 && (
                         <MessageIcon 
-                        picture={'/images/watchLive.jpg'} 
+                        picture={'/images/giving.jpg'} 
                         pTag={'Sow your seeds, tithes and Offering'}
-                        HTag={'Keys to the Supernatural by Apostle Glory Helen Ikeleji during the Goshen Sunday Service'}
+                        HTag={'Giving'}
                         Buttontag={'See Details'}
                         />
                     )
