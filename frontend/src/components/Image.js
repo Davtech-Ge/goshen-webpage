@@ -1,14 +1,15 @@
 import React from 'react';
-import background from '../logo/edited2.png'
+import video from '/images/firstImage.mp4'
 
 const Image = () => {
     return (
         <section className='bg-black py-10 px-4'>
-            <div className='max-w-5xl mx-auto'>
-                <div className='mb-6 over-hidden rounded-lg shadow-lg'>
-                <img src={background} alt={background} className=' w-full'/>
-                </div>
-            </div>
+            <video src={video} autoPlay loop muted style={{
+                width: '100%',
+                height: '50%',
+                pointerEvents: 'none',
+            }} 
+            />
         </section>
     )
 }
