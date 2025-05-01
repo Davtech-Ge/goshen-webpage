@@ -64,7 +64,7 @@ useEffect(() => {
                 <img src={LogoIcon} alt='CGCA' width={50} height={50} className='rounded-full shadow-lg' />
             </div>
             <div className='p-4 flex justify-between'>
-                <button className='bg-purple-800 text-white px-4 py-2 rounded-md' onClick={() => setDisplayMenuIcon(!displayMenuIcon)}>
+                <button className='bg-black bg-opacity-85 text-white px-4 py-2 rounded-md' onClick={() => setDisplayMenuIcon(!displayMenuIcon)}>
                 {displayMenuIcon ? <FiX size={16} /> : <FiMenu size={16} />}
                 </button> 
             </div>
