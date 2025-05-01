@@ -83,10 +83,10 @@ const MessageIcon = ({picture, pTag, HTag, Buttontag}) => {
     return (
         <div className='rounded-lg overflow-hidden w-full h-3/4 lg:h-screen shadow-lg mb-6'>
                 <div className='relative w-full h-1/2'>
-                <img src={picture} alt='livestream' className='w-full h-full' />
+                <img src={picture} alt='livestream' className='w-full h-full object-cover' />
                 </div>
 
-                <div className=' absolute bottom-0 bg-gray-900 p-4'>
+                <div className=' absolute bottom-0  p-4'>
                     <h3 className='text-xl font-semibold'>{HTag}</h3>
                     <p className='text-gray-400 mt-2'>
                         {pTag}
