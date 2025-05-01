@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LatestFeatures from '../components/LatestFeatures';
 import AboutUS from '../components/AboutUS';
+import School from '../components/School';
 
 const Home = () => {
   return (
@@ -25,14 +26,9 @@ const Home = () => {
             <Boxes />
         </section>
 
-        <div>
-            <div className='text-white'>
-                <h1>GSOM</h1>
-                <h1>Goshen School of Ministry</h1>
-                <p>The Goshen School of Ministry (GSOM) is a programme organised by Christ Goshen City with the vision of raising kingdom ambassadors to transform the society. We seek to raise, train and equip kingdom ambassadors who will represent Christ and His agenda in any/every sphere of influence they find themselves</p>
-
-                <button>REGISTER</button>
-            </div>
+        <div className='w-full mt-2 mx-auto'>
+        <h1 className="flex text-2xl text-gray-400">GSOM</h1>
+            <School />
         </div>
 
         <div className='text-white'>
