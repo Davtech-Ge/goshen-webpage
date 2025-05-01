@@ -2,8 +2,8 @@ import React from 'react';
 
 const Image = () => {
     return (
-        <section className='bg-black py-10 px-4'>
-            <img src='/image/homepage.jpg' alt='homepage' className='w-full md:h-screen h-56 object-cover' />
+        <section className='bg-black py-10 px-4 md:h-screen h-1/2'>
+            <img src='/image/homepage.jpg' alt='homepage' className='w-full h-full object-cover' />
            
         </section>
     )
