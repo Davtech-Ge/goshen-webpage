@@ -1,5 +1,4 @@
 import React from 'react';
-import video from '/images/firstImage.mp4'
 
 const Image = () => {
     return (
