@@ -10,7 +10,7 @@ const LatestFeatures = () => {
 
 return (
     <section className='bg-black text-white py-4 px-4'>
-            <div className='max-w-5xl mx-auto relative'>
+            <div className='w-full hover:lg:h-screen h-3/5 mx-auto relative'>
                     <h1>Latest Feature</h1>
                     <div>
                             {
@@ -81,21 +81,24 @@ return (
 }
 const MessageIcon = ({picture, pTag, HTag, Buttontag}) => {
     return (
+    <div>
         <div className='rounded-lg overflow-hidden w-full h-3/4 lg:h-screen shadow-lg mb-6'>
-                <div className='relative w-full h-1/2'>
-                <img src={picture} alt='livestream' className='w-full h-full object-cover' />
-                </div>
-
-                <div className=' absolute bottom-0  p-4'>
-                    <h3 className='text-xl font-semibold'>{HTag}</h3>
-                    <p className='text-gray-400 mt-2'>
-                        {pTag}
-                    </p>
-                    <button className='mt-4 border border-purple-600 text-purple-600 px-4 py-2 rounded-full hover:text-purple-800'>
-                        {Buttontag}
-                    </button>
-                </div>
-            </div>
+        <div className='relative w-full h-1/2'>
+        <img src={picture} alt='livestream' className='w-full h-full object-cover' />
+        </div>
+        <div className='absolute bottom-0 left-0 w-full bg-opacity-50 p-4'></div>
+            <h3 className='text-xl font-semibold text-white'>{HTag}</h3>
+        </div>
+        <div className=' absolute bottom-0  p-4'>
+            <h3 className='text-xl font-semibold'>{HTag}</h3>
+            <p className='text-gray-400 mt-2'>
+                {pTag}
+            </p>
+            <button className='mt-4 border border-purple-600 text-purple-600 px-4 py-2 rounded-full hover:text-purple-800'>
+                {Buttontag}
+            </button>
+        </div>
+    </div>
     )
 }
 export default LatestFeatures
