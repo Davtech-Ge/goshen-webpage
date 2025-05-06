@@ -3,7 +3,7 @@ const School = () => {
         <section className="bg-black text-white py-12 px-4">
             <div className="relative w-full h-3/4 lg:h-screen ">
                 <img src='/images/GoshenSChool.jpg' alt="goshen school" className=" w-full h-full object-cover" />
-            </div>
+            
 
             
             <div className=' absolute bg-gray-900 bottom-0 left-0 mt-12 text-white'>
@@ -13,6 +13,7 @@ const School = () => {
                 <button className="text-purple-600 border border-purple-600 rounded-full hover:bg-purple-700">
                     REGISTER
                 </button>
+            </div>
             </div>
         </section>
     )
