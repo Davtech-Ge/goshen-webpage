@@ -36,7 +36,7 @@ const Home = () => {
         </div>
 
         <div>
-            <div className='w-full h-full'> 
+            <div className='w-full h-full mx-auto mt-2'> 
                <Testimony />
             </div>
         </div>
