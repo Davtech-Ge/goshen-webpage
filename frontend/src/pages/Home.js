@@ -6,12 +6,13 @@ import LatestFeatures from '../components/LatestFeatures';
 import AboutUS from '../components/AboutUS';
 import School from '../components/School';
 import Location from '../components/Location';
+import Testimony from '../components/Testimony';
 
 const Home = () => {
   return (
     <main className='min-h-[calc(100vh-80px)] h-full overflow-x-scroll'>
         <div className='bg-gray-800 flex items-center justify-center'>
-            <div className='flex items-center justify-center w-full h-42'>
+            <div className='flex items-center justify-center w-full h-full'>
                 <Image />
             </div>
         </div>
@@ -35,14 +36,8 @@ const Home = () => {
         </div>
 
         <div>
-            <div className='text-white'> 
-                <img src='/images/externalminis.jpg' alt='testimonies' className='w-full h-45 object-cover relative' />
-                <h1>TESTIMONIES</h1>
-                <h1>(FAITH STORIES)</h1>
-
-                <p>We welcome testimonies from our online viewers connecting across the world. please share your testimonies with us via:</p>
-                <p>christgoshencitybethel@gmail.com</p>
-                <button>SEND TESTIMONY</button>
+            <div className='w-full h-full'> 
+               <Testimony />
             </div>
         </div>
     </main>
