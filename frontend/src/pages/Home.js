@@ -2,10 +2,10 @@ import Boxes from './Boxes';
 import Image from '../components/Image'
 import Livestream from '../components/Livestream';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import LatestFeatures from '../components/LatestFeatures';
 import AboutUS from '../components/AboutUS';
 import School from '../components/School';
+import Location from '../components/Location';
 
 const Home = () => {
   return (
@@ -31,14 +31,8 @@ const Home = () => {
             <School />
         </div>
 
-        <div className='text-white'>
-            <h1>LOCATIONS</h1>
-            <p>We are <span>one church</span> with two branches in Kaduna</p>
-
-            <div>
-                <h1><Link to={'/'} >Maigero </Link></h1>
-                <h1><Link to={'/'} >Narayi </Link></h1>
-            </div>
+        <div className='w-full mt-2 mx-auto'>
+            <Location />
         </div>
 
         <div>

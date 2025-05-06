@@ -10,7 +10,7 @@ const handleClick = (buttonId) => {
 
 return (
     <section className='bg-black text-white py-4 px-4'>
-            <div className='w-full hover:lg:h-screen h-3/5 mx-auto relative'>
+            <div className='w-full md:h-screen h-3/5 mx-auto relative'>
                     <h1>Latest Feature</h1>
                     <div>
                         <MessageIcon
