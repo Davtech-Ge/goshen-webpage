@@ -27,7 +27,6 @@ const Home = () => {
         </section>
 
         <div className='w-full mt-2 mx-auto'>
-        <h1 className="flex text-2xl text-gray-400">GSOM</h1>
             <School />
         </div>
 
