@@ -14,23 +14,13 @@ return (
                     <h1>Latest Feature</h1>
                     <div>
                             {
-                                    selectedButton === null && (
+                                    selectedButton === null || 1 && (
                                             <MessageIcon 
                                                     picture={'/images/watchLive.jpg'}
                                                     pTag={'Keys to The Supernatural'}
                                                     HTag={'Keys to the Supernatural by Apostle Glory Helen Ikeleji during the Goshen Sunday Service'}
                                                     Buttontag={'Watch Now'}
                                                     />
-                                    )
-                            }
-                             {
-                                    selectedButton === 1 && (
-                                            <MessageIcon 
-                                            picture={'/images/watchLive.jpg'} 
-                                            pTag={'Keys to The Supernatural'}
-                                            HTag={'Keys to the Supernatural by Apostle Glory Helen Ikeleji during the Goshen Sunday Service'}
-                                            Buttontag={'Watch Now'}
-                                            />
                                     )
                             }
                              {
@@ -82,8 +72,8 @@ return (
 const MessageIcon = ({picture, pTag, HTag, Buttontag}) => {
     return (
     <div>
-        <div className='rounded-lg overflow-hidden w-full h-3/4 lg:h-screen shadow-lg mb-6'>
-        <div className='relative w-full h-1/2'>
+        <div className='relative rounded-lg overflow-hidden w-full h-3/4 lg:h-screen shadow-lg mb-6'>
+        <div className='w-full h-1/2'>
         <img src={picture} alt='livestream' className='w-full h-full object-cover' />
         </div>
         <div className='absolute bottom-0 left-0 w-full bg-opacity-50 p-4'></div>

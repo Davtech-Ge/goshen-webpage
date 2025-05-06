@@ -2,7 +2,7 @@ import React from 'react';
 
 const Image = () => {
     return (
-        <div className='bg-black py-10 px-4 w-full md:h-screen h-1/2'>
+        <div className='bg-black py-10 px-4 w-full h-screen sm:h-1/2'>
             <img src='/images/homepage.jpg' alt='homepage' className='w-full h-full object-cover' />
            
         </div>
