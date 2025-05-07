@@ -4,13 +4,13 @@ const Services = () => {
   return (
     <main className=' min-h-[calc(100vh-80px)] background'>
        <section className='min-h-screen flex flex-col md:flex-row bg-zinc-900 text-white'>
-          <div className='md:w-1/2 w-full h-auto md:h-auto'>
+          <div className='md:w-1/2 w-full h-auto md:h-auto sm:relative'>
           <img src='/images/reachout.png' alt='Apostle Helen Glory Ikeleji'
           className='w-full h-full object-cover'
           />
           </div>
 
-          <div className='md:w-1/2 w-full flex items-center justify-center p-10'> 
+          <div className='md:w-1/2 w-full flex items-center justify-center p-10 sm:absolute sm:top-0 sm:right-0'> 
             <div>
               <h2>About Apostle Glory Helen Ikeleji - The Deborah of Our Time</h2>
               <p> Apostle Glory Helen Ikeleji is a fiery woman of God, a dynamic preacher, prophetic voice, and bestselling author to this generation. With over 17 years of ministry experience, she carries a divine mandate to deliver the oppressed, restore destinies, and raise a godly army that impacts the world for Christ.</p><br />
