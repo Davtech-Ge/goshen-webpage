@@ -2,48 +2,39 @@ import React from 'react'
 
 const Services = () => {
   return (
-    <main className='bg-teal-100 min-h-[calc(100vh-80px)] h-full overflow-x-scroll'>
-       <div>
-            <div className='p-5 mt-5'>
-                <h1 className='text-3xl font-bold'>Our Service Schedule </h1>
-                
-            </div>
-            <div className='p-6 bg-blue-800 mx-11 opacity-90 mb-14 shadow-lg rounded-lg relative md:float-right md:mr-6 md:ml-16 md:w-9/12'>
-                <div className='flex justify-center'>
-                <h1 className="text-2xl font-bold text-white">Goshen City Assembly Head-branch</h1>
-                </div>
-                <div>
-                  <ul className='p-3 gap-10 text-amber-100 font-semibold'>
-                    <li className='mb-3 text-l'>Hour of prayer =&gt; Mondays [6:15am - 7:15am]</li>
-                    <li className='mb-3 text-l'>Counseling and Deliverance =&gt; Tuesday [8:00am - 12:00pm] </li>
-                    <li className='mb-3 text-l'>Bible Study and Holy Communion Service =&gt; Wednesday [5:00pm - 7:00pm]</li>
-                    <li className='mb-3 text-l'>PUSH (Pray Until Something Happens) =&gt; Friday [5:00pm - 6:00pm]</li>
-                    <li className='mb-3 text-l'>Sunday Service =&gt; Sunday [7:30am - 10:00am ]</li>
-                  </ul>
+    <main className=' min-h-[calc(100vh-80px)] background'>
+       <section className='min-h-screen flex flex-col md:flex-row bg-zinc-900 text-white'>
+          <div className='md:w-1/2 w-full h-64 md:h-auto'>
+          <img src='/images/reachout.png' alt='Apostle Helen Glory Ikeleji'
+          className='w-full h-full object-cover'
+          />
+          </div>
 
-                  <p className='text-amber-100 text-xl font-semibold'>*Venue: Goshen Avenue, Ungwan-Maigero, Kaduna.</p>
-                </div>
-                  
-            </div>
+          <div className='md:w-1/2 w-full flex items-center justify-center p-10'> 
+            <div>
+              <h2>About Apostle Glory Helen Ikeleji - The Deborah of Our Time</h2>
+              <p> Apostle Glory Helen Ikeleji is a fiery woman of God, a dynamic preacher, prophetic voice, and bestselling author to this generation. With over 17 years of ministry experience, she carries a divine mandate to deliver the oppressed, restore destinies, and raise a godly army that impacts the world for Christ.</p><br />
 
-            <div className='p-6 mb-4 bg-blue-800 min-h-60 mx-11 opacity-90 shadow-lg rounded-lg md:float-left md:w-9/12'>
-                <div className='flex justify-center'>
-                <h1 className="text-2xl font-bold text-white">Goshen City Assembly Narayi Branch</h1>
-                </div>
-                <div>
-                  <ul className='p-3 gap-10 text-amber-100 font-semibold'>
-                    <li className='mb-3 text-l'>Hour of prayer =&gt; Mondays [6:15am - 7:15am]</li>
-                    <li className='mb-3 text-l'>Counseling and Deliverance =&gt; Tuesday [8:00am - 12:00pm] </li>
-                    <li className='mb-3 text-l'>Bible Study and Holy Communion Service =&gt; Wednesday [5:00pm - 7:00pm]</li>
-                    <li className='mb-3 text-l'>PUSH (Pray Until Something Happens) =&gt; Friday [5:00pm - 6:00pm]</li>
-                    <li className='mb-3 text-l'>Sunday Service =&gt; Sunday [7:30am - 10:00am ]</li>
-                  </ul>
-
-                  <p className='text-amber-100 text-xl font-semibold'>*Venue: Perry Plaza, Cinema Road, Narayi Kaduna.</p>
-                </div>
-                  
+              <p>From the tender age of 7, Apostle Glory began experiencing profound revelation and personal encounters with Jesus. What started as a prayer and counsel for family and neighbors blossomed into a powerful ministry that has touched millions worldwide. Like the biblical Deborah, she fears no battle when it comes to obeying God's instruction, her unwavering faith and boldness inspire countless souls✍️.</p>
             </div>
-       </div>
+          </div>
+       </section>
+
+       <section className='min-h-screen flex flex-col md:flex-row bg-black text-white'>
+       <div className='md:w-1/2 w-full flex items-center justify-center p-10'> 
+            <div>
+              <h2>About Apostle Glory Helen Ikeleji - <br /> The Deborah of Our Time</h2>
+              <p>From the tender age of 7, Apostle Glory began experiencing profound revelation and personal encounters with Jesus. What started as a prayer and counsel for family and neighbors blossomed into a powerful ministry that has touched millions worldwide. Like the biblical Deborah, she fears no battle when it comes to obeying God's instruction, her unwavering faith and boldness inspire countless souls✍️.</p>
+            </div>
+          </div>
+
+          <div className='md:w-1/2 w-full h-64 md:h-auto'>
+          <img src='/images/reachout.png' alt='Apostle Helen Glory Ikeleji'
+          className='w-full h-full object-cover'
+          />
+          </div>
+
+       </section>
     </main>
   )
 }
