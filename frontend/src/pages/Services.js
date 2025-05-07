@@ -4,7 +4,7 @@ const Services = () => {
   return (
     <main className=' min-h-[calc(100vh-80px)] background'>
        <section className='min-h-screen flex flex-col md:flex-row bg-zinc-900 text-white'>
-          <div className='md:w-1/2 w-full h-64 md:h-auto'>
+          <div className='md:w-1/2 w-full h-auto md:h-auto'>
           <img src='/images/reachout.png' alt='Apostle Helen Glory Ikeleji'
           className='w-full h-full object-cover'
           />
