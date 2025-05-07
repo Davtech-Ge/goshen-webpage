@@ -7,15 +7,22 @@ const Location = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      if (scrollY < 100) {
-        setHighlight('Maigero')
-      } else {
-        setHighlight('Narayi')
+      const relativeElement = document.querySelector('.relative');
+      if (relativeElement) {
+        const screenTop = relativeElement.offsetTop;
+        const screenHeight = relativeElement.offsetHeight;
+        if (scrollY >= screenTop && scrollY < screenTop + screenHeight) {
+          setHighlight('Maigero');
+        } else {
+          setHighlight('Narayi');
+        }
       }
-    }
+    };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [])
   return (
     <div className='bg-black text-white p-4'>
