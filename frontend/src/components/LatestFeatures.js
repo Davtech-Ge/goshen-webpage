@@ -88,10 +88,10 @@ const MessageIcon = React.memo(({ picture, pTag, HTag, Buttontag }) => {
                     <img src={picture} alt='livestream' className='w-full h-full object-cover' />
                 </div>
             </div>
-            <div className='absolute bottom-1/4 right-4 p-4'>
-                <h3 className='text-xl font-semibold'>{HTag}</h3>
-                <p className='text-gray-400 mt-2'>{pTag}</p>
-                <button className='mt-4 border border-purple-600 text-purple-600 px-4 py-2 rounded-full hover:text-purple-800'>
+            <div className='absolute bottom-1/4 right-0 p-4'>
+                <h3 className='text-lg font-semibold'>{HTag}</h3>
+                <p className='text-gray-300  mt-2'>{pTag}</p>
+                <button className='mt-4 border border-yellow-500 text-yello-500 px-3 py-1 rounded-full hover:text-yellow-600'>
                     {Buttontag}
                 </button>
             </div>
